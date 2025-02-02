@@ -1,1 +1,773 @@
-user=sivas58jojo@gmail.com&pass=J0qCKJn39zoEwoM%2b5wykcw%3d%3d&isMobile=False&timeOut=2.02.2025+15%3a22%3a25&hs=-MQX_gHigaeN1DAn2VMiJw
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link href="content/s/logingamestyle.css" rel="stylesheet" type="text/css" /><meta http-equiv="PRAGMA" content="NO-CACHE" /><meta http-equiv="EXPIRES" content="-1" /><title>
+	Login Game
+</title>
+    <!-- Google Tag Manager -->
+    <!--
+        <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KKTVJVQ');
+    </script>
+        -->
+    <!-- End Google Tag Manager -->
+    <script src="content/j/jquery331.min.js"></script>
+    <!--script type="text/javascript">var wid=3060,gid=9642;</script-->
+    <!--script src="http://ad.reklamport.com/scripts/rp.js" type="text/javascript"></script-->
+    <script type="text/javascript">
+
+        $(document).on('dragover', function (e) {
+            $("span#move").html("<br/>Geçersiz İşlem");
+            event.preventDefault()
+            return false;
+        });
+
+        function OnAdRegister() {
+            setTimeout('document.location = "logingame.aspx";', 3000);
+        }
+
+        function TxtFocus(obj, text) {
+            if (obj.value == text) {
+                obj.value = "";
+            }
+        }
+
+        function TxtBlur(obj, text) {
+            if (obj.value == "") {
+                obj.value = text;
+            }
+        }
+
+        function BadLogin() {
+            document.getElementById("wrongUserName").style.display = "none";
+            document.getElementById("badLogin").style.display = "block";
+            document.getElementById("notActivated").style.display = "none";
+            document.getElementById("notActivatedPhone").style.display = "none";
+            document.getElementById("wrongsec").style.display = "none";
+            document.getElementById("txtPasword").text = "";
+            document.getElementById("txtSecImage").text = "";
+        }
+
+        function WrongUserName() {
+            document.getElementById("wrongUserName").style.display = "block";
+            document.getElementById("badLogin").style.display = "none";
+            document.getElementById("notActivated").style.display = "none";
+            document.getElementById("notActivatedPhone").style.display = "none";
+            document.getElementById("wrongsec").style.display = "none";
+            document.getElementById("txtPasword").text = "";
+            document.getElementById("txtSecImage").text = "";
+        }
+
+        function NotActivated() {
+            document.getElementById("wrongUserName").style.display = "none";
+            document.getElementById("badLogin").style.display = "none";
+            document.getElementById("notActivated").style.display = "block";
+            document.getElementById("notActivatedPhone").style.display = "none";
+            document.getElementById("wrongsec").style.display = "none";
+        }
+        function NotActivatedPhone() {
+            document.getElementById("wrongUserName").style.display = "none";
+            document.getElementById("badLogin").style.display = "none";
+            document.getElementById("notActivated").style.display = "none";
+            document.getElementById("notActivatedPhone").style.display = "block";
+            document.getElementById("wrongsec").style.display = "none";
+        }
+        function WrongSecurity() {
+            document.getElementById("wrongUserName").style.display = "none";
+            document.getElementById("badLogin").style.display = "none";
+            document.getElementById("notActivated").style.display = "none";
+            document.getElementById("notActivatedPhone").style.display = "none";
+            document.getElementById("wrongsec").style.display = "block";
+            document.getElementById("txtSecImage").text = "";
+            document.getElementById("txtSecImage").focus();
+        }
+
+
+    </script>
+    <script type="text/javascript">
+        function onSubmit(token) {
+            document.getElementById("#form1").submit();
+        }
+        function IsNumeric(sText) {
+            var ValidChars = "0123456789";
+            var IsNumber = true;
+            var Char;
+
+
+            for (i = 0; i < sText.length && IsNumber == true; i++) {
+                Char = sText.charAt(i);
+                if (ValidChars.indexOf(Char) == -1) {
+                    IsNumber = false;
+                }
+            }
+
+            return IsNumber;
+        }
+
+        function CheckMobileFormat(objTextbox) {
+
+            var sText = objTextbox.value;
+
+
+            if (sText.length > 1 && IsNumeric(sText) && sText.substr(0, 1) == '0') {
+                objTextbox.value = sText.substr(1, sText.length - 1);
+            }
+        }
+
+        function DoFocus() {
+            var item = document.getElementById("txtUserName");
+            var itempass = document.getElementById("txtPasword");
+            var itemval = document.getElementById("txtUserName").value;
+
+            if (itemval == "") {
+                item.focus();
+            } else {
+                itempass.focus();
+            }
+
+        }
+    </script>
+</head>
+<body onload="DoFocus();">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKTVJVQ" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <form method="post" action="./logingame.aspx?server=93.155.105.236%3a27201" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjE0MzQ4NTY2Mg8WAh4Gc2VydmVyBRQ5My4xNTUuMTA1LjIzNjoyNzIwMRYCAgEPZBYCZg9kFgYCAQ8PZBYEHgdvbkZvY3VzBSNUeHRGb2N1cyh0aGlzLCdDZXAgTm8gdmV5YSBFbWFpbCcpOx4Gb25CbHVyBSJUeHRCbHVyKHRoaXMsJ0NlcCBObyB2ZXlhIEVtYWlsJyk7ZAIDDw9kFgYfAQUYVHh0Rm9jdXModGhpcywnxZ5pZnJlJyk7HwIFF1R4dEJsdXIodGhpcywnxZ5pZnJlJyk7HgV2YWx1ZQUGxZ5pZnJlZAIFD2QWAgIBDw9kFgYfAQUgVHh0Rm9jdXModGhpcywnR8O8dmVubGlrIEtvZHUnKTsfAgUfVHh0Qmx1cih0aGlzLCdHw7x2ZW5saWsgS29kdScpOx8DBQ5Hw7x2ZW5saWsgS29kdWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFCUNoZWNrQm94MQWTBZb9PjoKdLz+F4YD6U+YZmDErHFHPlVn+KxWGP5v" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pr40Xsd87So33aN8qEyUSg_o7KzVWpdEZb-x6ba8ekQcUDE9mac-N-T6vtrXqNFoMdQDVuP-eaNH7CemWLvBMwl_bbvnEgw4gBB_bwudWtA1&amp;t=638628315619783110" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=a0M2JsuzXaVW-PXlp2TbVXolsQgM5qKOEGUTZqw2S4uGUvqfenRogttevfsB7rg4zD7NDnv-dUdnBoKmHnuIkHOGEJ9e8YA3vqgIYCdQF3Y1&amp;t=638628315619783110" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="961F6804" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAhRfsokSnSyTaTA9Q+v9R6qY3plgk0YBAefRz3MyBlTcGVRSe0OPIWEAEhWl3sp/9a6bMz0rS3OOaXbrD45CC1goRCr7j10BNyMBx5ZdwO4hwNvRApU4e6xFs0bUNTPVcDyZRxZzMbUjuGRZWXL7NevFtOxmaIrwrTh3278pMIQYfDoikIrRJSp4POsjRD1JFgojUE1kCFWf0i37KoyS6lo" />
+</div>
+        <div id="wrapper">
+            <div class="Top">
+            </div>
+            <div class="Center">
+                
+                <div id="divLogin" class="Login">
+                    
+                    <div class="User">
+                        <input name="txtUserName" type="text" id="txtUserName" class="validInput" onkeyup="CheckMobileFormat(this);" autocomplete="off" onFocus="TxtFocus(this,&#39;Cep No veya Email&#39;);" onBlur="TxtBlur(this,&#39;Cep No veya Email&#39;);" />
+                        <label>Telefon No / E-Posta:</label>
+                    </div>
+                    <div class="Password">
+                        <input name="txtPasword" type="password" id="txtPasword" class="validInput" autocomplete="off" onFocus="TxtFocus(this,&#39;Şifre&#39;);" onBlur="TxtBlur(this,&#39;Şifre&#39;);" value="Şifre" />
+                        <a onclick="showModal('ResetPassword')" class="forgetPass" tabindex="-1" href="#">?</a>
+                        <label>Şifre:</label>
+                    </div>
+                    <div id="textSecImageDiv" class="validContentLogin">
+                        <label>Güvenlik Kodu:</label>
+                        <input name="txtSecImage" type="text" id="txtSecImage" class="validInput" autocomplete="off" onFocus="TxtFocus(this,&#39;Güvenlik Kodu&#39;);" onBlur="TxtBlur(this,&#39;Güvenlik Kodu&#39;);" value="Güvenlik Kodu" />
+                        <span id="RequiredFieldValidator1" class="validInput" style="display:none;">(*)</span>
+                        <img id="imgOnay" src="securityimage.aspx" />
+                    </div>
+                    <div class="linkContainer">
+                        <div class="alignLeft">
+                            <input id="CheckBox1" type="checkbox" name="CheckBox1" /><label for="CheckBox1">Kullanıcı adımı hatırla</label>
+                        </div>
+                        <div class="alignRight">
+                            <a id="ForgetMe" href="javascript:__doPostBack(&#39;ForgetMe&#39;,&#39;&#39;)">Beni Unut</a>
+                        </div>
+                    </div>
+                    <div class="butonContainer">
+                        <input type="submit" name="btnEnter" value="Giriş" id="btnEnter" class="enterBtn" />
+                        <a onclick="showModal('Register')" href="#" class="memberBtn">Kayıt Ol</a>
+                    </div>
+                    <div class="alert">
+                        
+                        <span id="wrongsec" style="display: none;">
+                            <br />
+                            Güvenlik kodu hatalı girildi. Lütfen tekrar deneyiniz.</span>
+                        <span id="wrongUserName" style="display: none;">
+                            <br />
+                            cep telefonu veya email formatı<br />
+                            (Örn: 5556667788 / abc@domain.com)</span>
+                        <span id="badLogin" style="display: none;">
+                            <br />
+                            Kullanıcı adı veya şifre hatalı</span>
+                        <span id="notActivated" style="display: none;">
+                            <br />
+                            Üyeliğiniz aktif edilmemiştir.</span>
+                        <span id="notActivatedPhone" style="display: none;">
+                        <br />
+                       Üyeliğiniz ile giriş yapabilmek için GSM doğrulaması yapmanız gerekmektedir. Doğrulama yapmak için www.istanbuloyun.com adresinden üyeliğiniz ile giriş yapmanız gerekmektedir.</span>
+                        <span id="move"></span>
+                    </div>
+                </div>
+                
+                <div id="TermOfUse" class="modal">
+                    <div class="modal-container">
+                        <div class="modal-title">
+                            <div>KULLANIM SÖZLEŞMESİ</div>
+                            <div class="close-modal">
+                                <svg fill="#FFFFFF" height="12px" width="12px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 512 512" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+                    512,452.922 315.076,256 		" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="modal-content">
+                            <p class="subContentText">
+                                <p class="agreement-changed-alert">
+                                    İstanbul Kıyamet Vakti Son Kullanıcı Sözleşmesi güncellenmiştir. Oyuna giriş yapabilmek için değişiklikleri kabul etmeniz gerekmektedir.
+                                    <br />
+                                    <br />
+                                </p>
+                                <strong>İSTANBUL KIYAMET VAKTİ (Oyun), TTNET A.Ş. (TTNET)</strong> tarafından geliştirilen ve TTNET'e ait olan bir bilgisayar oyunudur. Oyun'u indirerek, giriş yaparak, deneyerek, Oyun'a üye olarak ve/veya Oyun'u satın alarak, <strong>BURADA YAZILANLARI OKUDUĞUNUZU, ANLADIĞINIZI, KULLANIM ŞARTLARI VE İLGİLİ YASALAR HAKKINDA BİLGİLENDİĞİNİZİ VE BUNLARA UYACAĞINIZI PEŞİNEN KABUL ETMİŞ SAYILIRSINIZ.</strong>
+                                <br />
+                                <br />
+                                "Siz", "sizin", "sizinki" gibi terimler, üyeler, kullanıcılar ya da satın alan kişiler için kullanılmaktadır. "TTNET", "biz", "bizim", "bizimki" gibi terimler TTNET için kullanılmaktadır. Bu terimlerin çoğul kullanımları da, yine adı geçen tarafları ifade eder.
+                                <br />
+                                <br />
+                                <strong>1. GİRİŞ</strong><br />
+                                <br />
+                                Oyun da dahil olmak üzere ancak onunla sınırlı kalmayacak şekilde sitelerimize ait bütün içerik, materyaller, dokümanlar, bilgiler, grafikler, tasarımlar, ürünler, yazılımlar, güncellemeler, yamalar ve servisler, ilgili antlaşmalarla ve fikir / sanat eserleri kanunları ile yasal olarak korunmaktadır. Oyunun ve Oyunun sunulduğu web sitelerinin kodlarına erişmeye çalışanlar veya herhangi bir şekilde bu Sözleşmenin herhangi bir hükmünü ihlal edenler bunun sorumluluğunu üstlenirler ve hiçbir kısıtlama olmadan işbu Sözleşmenin kabul edildiği (Oyunun indirildiği/Oyunun denendiği/Oyuna üye olunduğu/Oyunun satın alındığı) tarihte yürürlükte olan Internet, veri aktarımı, e-posta ve gizlilik ile ilgili tüm yasa ve ikincil düzenlemelere uymayı kabul ve taahhüt ederler.
+                                <br />
+                                <br />
+                                Oyun'un, web sitelerinin ve bunların içeriğindeki tüm materyallerin burada belirtilen Kullanım Koşulları'na aykırı kullanılması durumunda TTNET'in, web sitelerine erişiminizi ve kullanımınızı sonlandırma hakkına sahip olduğunu kabul etmiş bulunuyorsunuz. TTNET; sözleşme kapsamında belirtilen veya belirtilmeyen herhangi bir sebeple üyelikleri engelleme, susturma,  silme hakkına sahip olduğu gibi bu hallerle sınırlı kalmamak üzere oyun kullanıcılarının envanterinde bulunan herhangi bir eşyayı/materyali silebileceğini kabul etmiş bulunuyorsunuz.
+                                <br />
+                                <br />
+                                Üyeliğin sona ermesi halinde, Sözleşmenin sizin tarafınızdan ihlali halindeki yükümlülüklerinize ek olarak TTNET'e ait Sitelerimizden elde etmiş olduğunuz ve lisansını satın aldığınız veya almadığınız tüm materyalleri ve uygulamaları kayıtlarınızdan yok etmekle mükellefsiniz. Sitelerimizi ve Oyunu kullanma hakkınızı ve bu amaçla size verilmiş şifreleri veya size tanınmış herhangi bir başka hakkı başkalarına devredemezsiniz.
+                                <br />
+                                <br />
+                                <strong>2. KULLANIM KOŞULLARI</strong><br />
+                                <br />
+                                Sitelerimizden indirilmiş Oyun, herhangi bir uygulama ya da kod, dosyalar, kodla oluşturulmuş veya koda entegre edilmiş resimler, Oyunla birlikte gelen veriler, güncellemeler, yamalar ve bunlarla sınırlı olmayan Oyuna ait diğer unsurların kullanımı, burada belirtilen kullanım koşulları ile tanımlanmıştır. Oyuna ve ilgili uygulamalara erişim ya da oyunun indirilmesi, size hiçbir şekilde Oyuna ve uygulamalara sahiplik veya herhangi bir fikri mülkiyet hakkı vermez.
+                                <br />
+                                <br />
+                                Oyunun resmi web sitesi <strong>www.istanbuloyun.com</strong> adresi ile belirlidir.
+                                <br />
+                                <br />
+                                Oyuna erişim, <strong>www.istanbuloyun.com</strong> web sitesinden indirilmesi ve bilgisayarınıza kurulması gereken oyun yazılımı ile yapılmaktadır. Sözü edilen yazılıma ait teknik gereksinimler web sitesinde duyurulmaktadır.
+                                <br />
+                                <br />
+                                Oyunu indirdikten sonra Oyun'a giriş yapabilmeniz için kullanım sözleşmesini kabul ederek Oyun'a üye olmanız gerekmektedir.
+                                <br />
+                                <br />
+                                Oyun, Internet üzerinden ve oyun sunucuları yardımıyla oynanan bir oyundur. Bu nedenle, Oyun'u oynayabilmek için Internet bağlantınızın aktif olması gerekmektedir. Internet bağlantılarında servis sağlayıcılardan ve/veya altyapıdan kaynaklanabilecek gecikmelerden ve/veya kesintilerden TTNET hiçbir şekilde sorumlu tutulamaz.
+                                <br />
+                                <br />
+                                Oyuna giriş yapmaya çalıştığınızda o anki aktif kullanıcı sayısına bağlı olarak oyun sunucularının tamamı dolu olabilir. Sadece ücretli kullanıcılar oyun sunucularına öncelikli erişim hakkına sahiptirler.
+                                <br />
+                                <br />
+                                Oyun yazılımı ve oyun sunucuları arasındaki iletişimin geriye doğru mühendislik yöntemleri ile çözülmeye çalışması, dinlenmesi, değiştirilmesi, başka sunuculara yönlendirilmesi, oyun sunucularının emüle edilmesi, başka oyun sunucularının kurulması ve/veya işletilmesi, modlar, scriptler, makrolar, hile dosyaları veya bu amaca yönelik herhangi bir dosya/program/yazılım vb. kullanılarak oyunda iletişimin engellenmesi, herhangi bir şekilde iletişimin engellenmesine yol açılması, tekrar tekrar ileti göndererek yazışmayı kesintiye uğratmak, reklam amaçlı yazışma alanına benzer engelleyici/kısıtlayıcı müdahalelerde bulunmak, oyunun ya da oyunla ilgili her türlü yazılım ve donanımın taklit edilmesi, taklit edilmesine aracılık edilmesi kullanım koşullarına aykırıdır. Bu tip faaliyet içinde bulunan kişi ve kurumlar hakkında TTNET her türlü hukuki işlemi başlatma hakkında sahiptir.
+                                <br />
+                                <br />
+                                Oyun içi sohbet (chat) alanlarında; reklam, terörizm ve terör örgütleri, Atatürk, bayrak, cumhuriyet, devlet, din, ırkçılık, uyuşturucu, politikacılar yada diğer tüzel hakkında yazışmalar, pornografik içerik, argo ve küfür içeren kelimelerin kullanımı ve diğer oyuncuları tacize, tehdit etmeye, diğer oyunculara hakaret etmeye yönelik davranışlar, sahte web sayfası, Truva atı, solucan, sosyal mühendislik yoluyla ya da buna imkan veren herhangi bir yolla diğer oyuncuların bilgilerini ele geçirmeye çalışmak, bilgilerin ele geçirilmesine aracılık etmek, ele geçirilen bilgileri saklamak, paylaşmak ve bunlarla sınırlı olmaksızın haksız ve hukuka aykırı her türlü davranışlar kullanım kurallarına aykırıdır. Bu tip davranış içinde bulunan kullanıcıların TTNET yetkilileri tarafından geçici ve/veya kalıcı süre ile Oyun'a erişimleri her zaman süreli ya da süresiz olarak engellenebilir. Bu nedenlerle erişimi engellenen hesap sahiplerinin, önceden satın almış oldukları oyun içi ürünler hakkında herhangi bir hak, iddia ve talep hakları bulunmamaktadır. Üyeler arasında yapılan yazışmaların içerik ve mahiyetinden dolayı TTNET herhangi bir sorumluluk kabul etmez. Yasal zorunluluklar nedeniyle talep edilmesi durumunda, sözü edilen kişilerin kişisel bilgileri yetkili merciler ile paylaşılabilir.
+                                <br />
+                                <br />
+                                Herhangi bir sebeple ve kasıt olmaksızın dahi Kullanım Koşullarının ihlal edilmesi halinde TTNET’in bu sebeple uğrayacağı her türlü hukuki, idari yaptırımdan, üçüncü kişilerce veya resmi veya özel kişi ve kurumlarca açılabilecek her türlü davadan, ileri sürülebilecek her türlü talepten sorumlu olduğunu kullanıcı kabul, beyan ve taahhüt eder. TTNET’in böyle bir durumda, söz konusu idari/adli süreç sonuçlanmadan dahi kullanıcıya rücu etme hakkı saklıdır.
+                                <br />
+                                <br />
+                                <strong>3. UYARILAR</strong><br />
+                                <br />
+                                Kullanım koşulları veya diğer kurallardaki değişiklikleri içeren ama onlarla sınırlı olmayan uyarılar; e-posta, normal posta veya sitelerdeki uyarı/duyuru linkleriyle yapılabilir. Kullanım koşulları size haber verilmeden değiştirilebilir. Kullanım koşullarını periyodik olarak gözden geçirerek, uygun davrandığınızdan emin olmak durumundasınız. Ayrıca, bazı uygulama ve servisleri kullanırken, o uygulama ve servislere özel ve size zaman zaman gösterilen ya da gönderilen kurallara uymak durumunda kalabilirsiniz. Bütün bu şartlar ve kurallar, bu vesileyle, burada belirtilen kullanım şartlarına dahil edilmiş olduğu tarafınızca da kabul edilmiş olur.
+                                <br />
+                                <br />
+                                TTNET'e ait web sitelerinde, TTNET'in veya üçüncü kişilerin hizmetleri hakkında reklam ve promosyonlar görüntülenebilir. Web sitemizde TTNET'e ait olmayan ve faaliyetleriyle ilgili bulunmayan diğer web sitelerine yönlendirme yapılabilir. Ziyaretçinin bu web sitelerinden herhangi birini ziyaret etmesi halinde üçüncü kişilerin kullanımında ve aitliğinde olan bu web sitelerinin politika ve uygulamalarından TTNET sorumlu değildir.
+                                <br />
+                                <br />
+                                TTNET'e ait internet sitelerinde verilen bilgiler, "olduğu gibi", "mevcut olduğu şekilde" sağlanmaktadırlar. TTNET, üçüncü kişiler hakkında olanlar da dahil web sitesinde yer alan bilgilerle ilgili olarak mülkiyet, satılabilirlik, doğruluk, güvenilirlik, kesinlik, belirli bir amaç için uygunluk ve/veya bilgisayar virüsü bulunmamasına ilişkin garantiler dahil ancak bunlarla sınırlı kalmamak kaydıyla, zımnen, açıkça ya da yasal olarak hiçbir garanti vermemektedir.
+                                <br />
+                                <br />
+                                <strong>4. LİSANS HAKKI</strong><br />
+                                <br />
+                                İndirme, deneme, satın alma ve/veya Oyun'a abone olmak, size; bireysel, münhasır olmayan, devredilmeyen ve ticari olmayan bir kullanım lisansı verir. Oyun ve uygulamaların telif hakkı kanunlarınca korunmakta olup Oyun’un fikri mülkiyeti tüm yönleriyle TTNET'e aittir. Bu bağlamda, herhangi bir şekilde Oyunu ve uygulamaları çoğaltmamayı, alt-lisans vermemeyi, ticari olarak kullanmamayı, Oyunun, uygulamaların ya da materyalin türevlerini oluşturmamayı kabul ve taahhüt ediyorsunuz.
+                                <br />
+                                <br />
+                                Oyunu, logoları, markaları ve fikri mülkiyet haklarıyla korunan, TTNET'e ait olan herhangi diğer materyali değiştirmeyeceğinizi ve kötüye kullanmayacağınızı kabul ve taahhüt ediyorsunuz. Oyun ve uygulamalar Digital Rights Management (DRM) sistemince korunmaktadır. Bu sistemler, Internet'te dijital olarak satılan içeriğin fikri mülkiyet haklarının korunması için geliştirilmiştir. Herhangi bir yazılım, program, uygulama kodu veya diğer herhangi bir cihazı, uygulamayı korumak amacıyla oluşturulmuş sistemi kırmak için kullanmayacağınızı kabul ve taahhüt ediyorsunuz.
+                                <br />
+                                <br />
+                                Oyun hakları ve logo, marka, lisans ile fikri mülkiyete konu tüm mali- manevi haklar dahil olmak üzere TTNET’in Türk Telekom Gurubu Şirketler ve İştirakler arasında bu hakları devretmek hakkı bulunmaktadır. Bu devir hakkının kullanılması size sözleşmenin sona erdirilmesi hakkı vermeyeceği gibi sözleşmede bir değişiklik yapmaya gerek olmadan tüm şartların devredilecek şirkete geçeceğini ve  TTNET’in haklarının devralan şirket yönünden de devam edeceğini kabul etmektesiniz. 
+                                <br />
+                                <br />
+                                <strong>5. KİŞİSEL BİLGİLER ve GİZLİLİK POLİTİKASI</strong><br />
+                                <br />
+                                Kayıt aşamasında, sitede veya alım sürecinde verdiğiniz bilgiler ve oyununuz açılırken bilgisayarınızın sistem konfigürasyonu ile ilgili sunucumuza gönderdiği bilgiler size daha iyi bir servis temin edilmesini sağlamaktadır.
+                                <br />
+                                <br />
+                                Kişisel bilgileriniz sunucularımızda yüksek güvenlik ile saklanırlar. Bu bilgiler özellikle (fakat bununla sınırlı olmamak kaydıyla) istatistiki amaçlar için kullanılmaktadır ve;
+                                <br />
+                                <br />
+                                - İşlemci, işletim sistemi, ekran kartı gibi bilgiler Oyun'un daha yüksek performansta çalışmasına yönelik çalışmalarımıza yardımcı olur,
+                                <br />
+                                - Oyunun nasıl kullanıldığını daha iyi anlamamıza yardımcı olur,
+                                <br />
+                                - Sohbet ile ilgili kurallarına ihlaline yönelik şikayetlerin araştırılması ve değerlendirilmesi amacıyla Oyun içi tüm sohbetlerin kayıtları tutulmaktadır.
+                                <br />
+                                <br />
+                                <strong>6. YÜKÜMLÜLÜKLERİN SINIRLANDIRILMASI</strong><br />
+                                <br />
+                                TTNET HİÇBİR ŞEKİLDE HERHANGİ BİR UYGULAMADAN KAYNAKLANAN VEYA ONUNLA İLGİLİ KAYIPLARDAN, GELİR KAYIPLARINDAN VEYA HERHANGİ BİR ÖZEL ZARARDAN DOĞRUDAN YA DA DOLAYLI OLARAK SORUMLU TUTULAMAZ. BELİRTİLEN SINIRLAMALAR, TTNET'İN BU TİP ZARARLARDAN HABERDAR EDİLMİŞ OLMASI İLE ORTADAN KALKMAZ.
+                                <br />
+                                <br />
+                                OYUNUN VEYA İNTERNET SİTESİNİN KULLANIMI SIRASINDA VEYA SONRASINDA OLUŞABILECEK HERHANGİ BİR PERFORMANS ARIZASI, HATA, EKSİKLİK, KESİNTİ, KUSUR, İŞLETME VE/VEYA NAKİLDE GECİKME, BİLGİSAYAR VİRÜSÜ VE/VEYA HAT VE/VEYA SİSTEM ARIZASI SONUCU DOĞRUDAN YA DA DOLAYLI ORTAYA ÇIKAN ZARAR, ZİYAN VE MASRAFLAR DÂHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE HİÇBIR ZARAR VE ZİYANDAN, TTNET VE/VEYA ÇALIŞANLARI, BU TÜR BİR ZARAR VE ZİYAN OLASILIĞINDAN HABERDAR EDİLMİŞ OLSALAR DAHİ, SORUMLU OLMAZLAR.
+                                <br />
+                                <br />
+                                <strong>7. SANAL ÜRÜN SATIN ALINMASI</strong><br />
+                                <br />
+                                Oyun içinde oyunun ilerlemesi için veya oyuncuların kullanması için objeler, özellikler, skiller vs. gibi sanal araçlar (“Sanal Ürün”) satın almanız halinde, söz konusu özellikler için belirtilen ücretleri tarafınızca tercih edilecek şekilde, bildirmiş olduğunuz cep telefonu numaranızın bağlı olduğu bir sonraki faturadan veya mevcut kontörlerinizden ya da kredi kartınızdan tahsil edileceğini kabul etmektesiniz. Herhangi bir nedenle Sanal Ürünün bedeli ödenmez veya banka kayıtlarında iptal edilir ise, Sanal Ürün oyun kayıtlarınızdan kaldırılacaktır. Ayrıca herhangi bir nedenle erişimi engellenen hesap sahiplerinin, önceden satın almış oldukları oyun içi ürünler ve  varsa oyun içi bakiyeleri hakkında herhangi bir hak, iddia ve talep hakları bulunmamaktadır. Bu tür durumlarda TTNET’in doğrudan veya dolaylı herhangi bir sorumluluğu bulunmamaktadır.
+                                <br />
+                                <br />
+                                Sanal Ürünün oyun kayıtlarına geçmesinden sonra ödemenin tahsil edildiği kredi kartının veya cep telefonu hattının tarafınızca haksız ve izinsiz olarak kullanıldığına dair 3. kişiler tarafından herhangi bir bildirimde bulunulması ve bunun kanıtlanması halinde, TTNET tarafından haksız ödemeden kaynaklı uğranılmış her türlü doğrudan ve/veya dolaylı tarafınıza rücu edilir ve bu durumda TTNET’in her türlü hakkı saklıdır.
+                                <br />
+                                <br />
+                                <strong>8. YETKİLİ MAHKEMELER</strong><br />
+                                <br />
+                                Burada belirtilen kullanım şartlarına dair anlaşmazlıklarda İstanbul Mahkemeleri yetkilidir.
+                            </p>
+                            <div class="agreement-btns" id="TermOfUseButtons">
+                                <input type="submit" name="UserAgreementBtn" value="Okudum, Kabul Ediyorum" id="UserAgreementBtn" />
+                                <div class="reject-agreement">Okudum, Kabul Etmiyorum</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Bottom">
+                <div class="Logo">
+                    <img src="content/i/footerLogo.jpg" width="114" height="46" alt="Sobee Studios.." />
+                </div>
+                <div id="Count"></div>
+                <div class="footerContainer">
+                    <div class="footerLink">
+                        Oyuna giriş yaparak <a onclick="showModal('TermOfUse')" href="#">Kullanım Sözleşmesi</a>'ni kabul etmiş sayılırsınız.
+                            <br />
+                        <a onclick="showModal('AydinlatmaMetni')" href="#">Aydınlatma Metni</a> | <a onclick="showModal('CerezPolitikasi')" href="#">Çerez Politikası</a>
+
+                    </div>
+                    <div class="CopyRight">2006-2017 © Tüm hakları TTNET A.Ş.'ne aittir.</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator1"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+RequiredFieldValidator1.controltovalidate = "txtSecImage";
+RequiredFieldValidator1.errormessage = "(*)";
+RequiredFieldValidator1.display = "Dynamic";
+RequiredFieldValidator1.validationGroup = "PC";
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+
+
+
+    <div class="modal" id="Register">
+        <div class="modal-container">
+            <div class="modal-title">
+                <div>ÜYE OL</div>
+                <div class="close-modal">
+                    <svg fill="#ffffff" height="12px" width="12px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <g>
+                            <g>
+                                <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+		                    512,452.922 315.076,256 		" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="content-centered">
+                    <svg fill="#edc515" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"></path>
+                    </svg>
+                    <p class="centered-info">Yeni üyelik oluşturmak için www.istanbuloyun.com adresinde bulunan Üyelik menüsünden üye olabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="ResetPassword">
+        <div class="modal-container">
+            <div class="modal-title">
+                <div>ÜYE OL</div>
+                <div class="close-modal">
+                    <svg fill="#ffffff" height="12px" width="12px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <g>
+                            <g>
+                                <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+		                        512,452.922 315.076,256 		" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="content-centered">
+                    <svg fill="#edc515" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"></path>
+                    </svg>
+                    <p class="centered-info">Şifrenizi www.istanbuloyun.com adresinden yenileyebilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="AydinlatmaMetni">
+        <div class="modal-container">
+            <div class="modal-title">
+                <div>AYDINLATMA METNİ</div>
+                <div class="close-modal">
+                    <svg fill="#FFFFFF" height="12px" width="12px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <g>
+                            <g>
+                                <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+			                    512,452.922 315.076,256 		" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-content">
+                <p class="subContentText">
+                    <strong>6698 SAYILI KİŞİSEL VERİLERİN KORUNMASI KANUNU UYARINCA KİŞİSEL VERİLERİN KORUNMASINA YÖNELİK AYDINLATMA METNİ</strong>
+                    <br />
+                    <br />
+                    Kişisel verilerin işlenmesinde başta özel hayatın gizliliği olmak üzere kişilerin temel hak ve özgürlüklerinin korunmasını amaçlayan, 7 Nisan 2016 tarih ve 29677 sayılı Resmî Gazete’de yayımlanan 6698 sayılı Kişisel Verilerin Korunması Kanunu (“Kanun”)’nun “Veri Sorumlusunun Aydınlatma Yükümlülüğü” başlıklı 10 uncu maddesi ile 10 Mart 2018 tarih ve 30356 sayılı Resmi Gazete’ de yayımlanan Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca işbu Aydınlatma Metni ile TTNET A.Ş tarafından işlenen ve aşağıda yer verilen kişisel verileriniz hakkında Veri Sorumlusu olarak sizleri bilgilendirmeyi hedeflemekteyiz.<br />
+                    <br />
+                    TTNET A.Ş, kişisel verilerinizin hukuka aykırı olarak işlenmesini, erişilmesini önleme ve muhafazasını sağlama amacıyla, uygun güvenlik düzeyini temin etmeye yönelik tüm teknik ve idari tedbirleri almaktadır.<br />
+                    <br />
+                    <br />
+                    <strong>1. İŞLENEN KİŞİLER VERİLER</strong>
+                    <br />
+                    <br />
+                    Kişisel veri, kimliği belirli veya belirlenebilir kişiye ilişkin her türlü bilgiyi ifade etmektedir. İşlenen kişisel verileriniz ile verilere ait kategoriler aşağıda belirtilmiştir.<br />
+                    <strong>Kimlik Bilgileri:</strong> Ad, soyad ve doğum tarihi bilgisi<br />
+                    <strong>İletişim Bilgileri:</strong> Telefon numarası ve e-posta adresi
+                    <br />
+                    <strong>Müşteri İşlem Bilgileri:</strong> Talep ve şikâyet kayıtları, alışveriş kayıtları ve oyun içi yazışma kayıtları<br />
+                    <strong>Mesleki Deneyim Bilgileri:</strong> Öğrenim bilgileri ve meslek bilgisi<br />
+                    <strong>İşlem Güvenliği Bilgileri:</strong> Kullanıcı adı, şifre (parola) bilgisi, IP bilgisi, MAC adresi ve log kayıtları<br />
+                    <strong>Pazarlama Bilgileri:</strong> Alışveriş geçmişi bilgileri<br />
+                    <br />
+                    <br />
+                    <strong>2. KİŞİSEL VERİLERİN İŞLENME AMAÇLARI</strong><br />
+                    <br />
+                    Kişisel verileriniz; Kanun’un 5 inci ve 6 ncı maddelerinde belirtilen işleme şartları ile ikincil düzenlemelere uygun olarak aşağıdaki amaçlar ile işlenebilecektir:
+				•	Ürünlerin ve hizmetlerin sunulması,<br />
+                    •	Ürün ve hizmetlerin pazarlama süreçlerinin yürütülmesi,<br />
+                    •	Ürün satış ve satış sonrası destek hizmetlerimizin yürütülmesi,<br />
+                    •	Müşteri ilişkileri yönetimi süreçlerinin yürütülmesi,<br />
+                    •	Erişim yetkilerinin yürütülmesi,<br />
+                    •	Talep/şikâyet yönetimi süreçlerinin yürütülmesi,<br />
+                    •	Müşteri memnuniyetine yönelik aktivitelerin yürütülmesi,<br />
+                    •	Daha iyi hizmet sunumu için network ve teknolojik ilerlemeler/iyileştirmeler kapsamında konvansiyonel ve dijital mecralarda ürün, servis ve iş geliştirilmesi,<br />
+                    •	Kötü niyetli kullanımları (virüs, siber saldırı, sahtecilik, dolandırıcılık (fraud) eylemleri) tespit edebilme ve önleme faaliyetlerinin yürütülmesi<br />
+                    •	Bilgi güvenliği süreçlerinin yürütülmesi,<br />
+                    •	Hukuki süreçlerin yürütülmesi ve hukuk işlerinin takibinin sağlanması,<br />
+                    •	Resmi makamlardan iletilen taleplerin karşılanması<br />
+                    <br />
+                    <br />
+                    <strong>3. KİŞİSEL VERİLERİN AKTARILMASI</strong><br />
+                    <br />
+                    Kişisel verileriniz, Kanunlar ve sair mevzuat kapsamında ve açıklanan amaçlarla Kanun’un kişisel verilerin yurt içi ve yurtdışına aktarılmasına ilişkin hükümleri kapsamında aşağıdaki 3. taraflara aktarılabilecektir:.<br />
+                    <br />
+                    •	Yetki vermiş olduğumuz, Şirketimiz nam ve hesabına faaliyette bulunan gerçek kişiler veya özel hukuk tüzel kişileri,<br />
+                    •	Düzenleyici ve denetleyici kurumlarla, kişisel verilerinizi tabi olduğu kanunlarında açıkça talep etmeye yetkili olan kamu kurum veya kuruluşları,<br />
+                    •	Avukatlar, denetçiler, danışmanlar ve hizmet alınan firmalar,<br />
+                    •	Tarafınızca yetki verilmiş olan vekil, vasi ve temsilcileriniz<br />
+                    <br />
+                    <br />
+                    <strong>4. KİŞİSEL VERİLERİN TOPLANMA YÖNTEMLERİ VE HUKUKİ SEBEPLERİ</strong><br />
+                    <br />
+                    Kişisel verileriniz; ilgili kişiler ile hukuki ilişkimizin kurulması esnasında ve söz konusu ilişkinin devamı süresince web sitemiz aracılığıyla otomatik yöntemler ile temin edilerek işlenebilmektedir.<br />
+                    <br />
+                    Kişisel verileriniz, Şirketimizle hukuki ilişkinizin kurulması esnasında ve söz konusu ilişkinin devamı süresince sizlerden, üçüncü kişilerden ve yasal mercilerden olmak kaydıyla elektronik mecralardan yukarıda yer verilen amaç ve aşağıda yazılı olan Kanun’un 5 inci, 6 ıncı ve 8 inci madde hükümlerinde öngörülen çerçevede hizmetlerin verilebilmesi amacı ile tamamen/kısmen otomatik veya otomatik olmayan yollarla toplanabilmektedir.
+                    <br />
+                    <br />
+                    Kişisel verileriniz aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:
+				•	Açık rızanızın bulunması,<br />
+                    •	Mevzuat ve resmi otoritelerce öngörülen bilgi saklama, raporlama, bilgilendirme yükümlülüklerine uymak,<br />
+                    •	Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması, talep edilen ürün ve hizmetleri sunabilmek ve akdettiğiniz sözleşmelerin gereğinin yerine getirilmesi,<br />
+                    •	Hukuki yükümlülüğün yerine getirebilmesi için zorunlu olması,<br />
+                    <br />
+                    <br />
+                    <strong>5. HAK VE TALEPLERİNİZ İÇİN BİZİMLE İLETİŞİME GEÇMEK İSTERSENİZ</strong><br />
+                    <br />
+                    Kanun’un ilgili kişinin haklarını düzenleyen 11 inci maddesi uyarınca taleplerinizi, mahiyetine ve başvuru yönteminize göre TTNET A.Ş tarafından başvurunun size ait olup olmadığının belirlenmesi ve böylece haklarınızı koruyabilmek için Veri Sorumlusuna Başvuru Usul ve Esasları hakkında Tebliğ’de (Tebliğ) belirtilen şartlara uygun düzenlenmiş dilekçeyle:<br />
+                    <br />
+                    •	İlgili kanala ilişkin aşağıda yer verilen adreslerimize direkt olarak bizzat elden iletebilir, posta yoluyla ya da noter kanalıyla ulaştırabilirsiniz,
+				•	Kayıtlı elektronik posta (KEP) adresi, güvenli elektronik imza veya mobil imza ile gönderilip saklanabilen metinler kullanmak suretiyle aşağıda belirtilen adreslerimize iletebilirsiniz.<br />
+                    <br />
+                    Bu kapsamda yapılacak olan başvurular tarafımızdan yapılacak kimlik doğrulamasını takiben kabul edilecek olup, talepleriniz, talebin niteliğine göre en kısa sürede ve en geç 30 gün içinde sonuçlandırılacaktır. Başvuruya yazılı olarak cevap verilmesi durumunda, 10 sayfaya kadar ücret alınmayacak olup 10 sayfanın üzerindeki her sayfa için 1 Türk Lirası işlem ücreti alınabilecektir. Başvuruya cevabın CD, flash bellek gibi bir kayıt ortamında verilmesi halinde ise kayıt ortamının maliyeti tutarında bir ücret talep edilebilecektir.
+                    <br />
+                    <br />
+                    <br />
+                    <strong>BAŞVURU KANAL ve ADRESLERİMİZ</strong><br />
+                    <br />
+                    <strong>TTNET A.Ş</strong><br />
+                    Direkt Başvuru: Bağlar Mah. Yalçın Koreş Cad. Fidan Sk. Erdinç İş merkezi No:1 34209 Güneşli/ İstanbul<br />
+                    Noter/Posta Kanalı: Gayrettepe Mahallesi, Vefa Bayırı Sokak, No:2 Kat:3 Beşiktaş/ İstanbul<br />
+                    KEP: <a href="mailto:ttnetkvkk@hs03.kep.tr">ttnetkvkk@hs03.kep.tr</a><br />
+                    Mail: <a href="mailto:ttnetkvkk@turktelekom.com.tr">ttnetkvkk@turktelekom.com.tr</a><br />
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="CerezPolitikasi">
+        <div class="modal-container">
+            <div class="modal-title">
+                <div>ÇEREZ POLİTİKASI</div>
+                <div class="close-modal">
+                    <svg fill="#FFFFFF" height="12px" width="12px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <g>
+                            <g>
+                                <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+		                    512,452.922 315.076,256 		" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="subContentText">
+                    <p>Türk Telekomünikasyon AŞ. ve Grup Şirketleri olarak web sayfalarımızda çerezler kullanmaktayız. Türk Telekom Grup Şirketleri bu web siteleri üzerinde kullanılan çerezlere ilişkin olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında her biri ayrı veri sorumlusu olarak hareket etmektedir. Web sayfalarımızı kullanarak aşağıda verilen açıklamalar ve seçimleriniz doğrultusunda bu çerezlerin kullanımına izin vermiş oluyorsunuz.</p>
+                    <p>Okumakta olduğunuz çerez politikamız çerezlerin ne olduğunu, onları nasıl kullandığımızı ve çerezlere ilişkin seçimlerinizi nasıl değiştirebileceğinizi açıklamaktadır.</p>
+                    <p><strong>Çerez Nedir?</strong></p>
+                    <p>Çerezler ziyaret ettiğiniz internet sayfalarının internet tarayıcınız aracılığıyla size ilettiği küçük metin dosyalardır. Çerez dosyası web tarayıcınızda saklanır ve sizi tanıyarak bir sonraki ziyaretinizi bu yolla kolaylaştırmayı ve web servisini daha kullanışlı hale getirmeyi sağlar. Çerezler web oturumu süresince saklanabildiği gibi (oturum çerezleri) daha uzun ve fakat sınırlı süreli saklanan çerezler de (kalıcı çerezler) mevcuttur.</p>
+                    <p><strong>Türk Telekom Çerezleri Nasıl Kullanır?</strong></p>
+                    <p>Kişisel verileriniz; bu politikada belirtilen amaçlar kapsamında ilgili web sitelerimiz üzerinden çerezler vasıtasıyla temin edilerek tamamen otomatik yöntemlerle, açık rıza vermiş olmanız ve/veya temel hak ve özgürlüklerinize zarar vermemek kaydıyla Şirketimiz meşru menfaati için veri işlemenin zorunlu olması hukuki sebeplerine dayanılarak işlenebilmektedir.</p>
+                    <p>Web sitelerimizin temel işlevlerini yerine getirmesi amacıyla kullandığımız zorunlu çerezler yanında istatistiki ve reklam/pazarlama amaçlarıyla 3. taraf şirketlerin çerezlerini de izniniz doğrultusunda kullanabilmekteyiz. Bu çerezler ve çerezlere ilişkin açıklamalarımız aşağıda yer almaktadır:</p>
+                    <p>Zorunlu Çerezler:</p>
+                    <p>Sayfalar arasında dolaştığınızda önceki sayfalarda yaptığınız seçimlerin hatırlanmasını sağlayan ve web sayfasına kayıt bilgilerinizi tutan çerezlerdir. Bu çerezler olmadan web sayfamız sağlıklı bir şekilde çalışmamaktadır.</p>
+                    <p>İstatistiki Çerezler:</p>
+                    <p>Siteye giriş sayısı, menülerin tıklanma sayısı gibi istatistiki bilgileri anonim olarak kullanarak sitemizi geliştirmemize yardım eden çerezlerdir.</p>
+                    <p>Web sayfamızda yer alan çerezler:</p>
+                    <p><strong>Zorunlu Çerezler</strong></p>
+                    <table class="TableCssNew" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Çerez Adı</th>
+                                <th>Sağlayıcı</th>
+                                <th>Kullanım Amacı</th>
+                                <th>Kullanım Süresi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ASP.NET_SessionId</td>
+                                <td>istanbuloyun.com (1. Taraf)</td>
+                                <td>Sayfa isteklerinin devamı süresince kullanıcı durumlarını korumak için kullanılır.</td>
+                                <td>Oturum</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 10px;"><strong>İstatistiki Çerezler</strong></p>
+                    <table class="TableCssNew" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Çerez Adı</th>
+                                <th>Sağlayıcı</th>
+                                <th>Kullanım Amacı</th>
+                                <th>Kullanım Süresi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WT_#</td>
+                                <td>istanbuloyun.com (1. Taraf)</td>
+                                <td>Ziyaretçinin tarayıcısı, işletim sistemi, IP adresi ve kullanıcı bilgileri ile ilgili teknik bilgilerin toplanması için kullanılır.</td>
+                                <td>10 yıl</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 10px;"><strong>Çerezlere ilişkin tercihlerinizi nasıl değiştirebilirsiniz?</strong></p>
+                    <p>Çerezlere ilişkin tercihlerinizi değiştirme adına aşağıdaki butonları kullanabilirsiniz. Ancak bu çerezlerin kullanımına izin vermediğiniz takdirde sayfamızda sunduğumuz özellikleri tümüyle kullanamayabileceğinizi belirtmek isteriz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Proxy" class="modal">
+        <div class="modal-container">
+            <div class="modal-title">
+                <div>VPN Kullanımı Kısıtlanmıştır</div>
+                <div class="close-modal">
+                    <svg fill="#ffffff" height="12px" width="12px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <g>
+                            <g>
+                                <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+		                    512,452.922 315.076,256 		" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="content-centered">
+                    <svg fill="#edc515" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"></path>
+                    </svg>
+                    <p class="centered-info">
+                        Hesabınızın güvenliği ve sistemlerimizin bütünlüğü için, VPN kullanarak bağlantı kurmanız şu anda desteklenmemektedir. Lütfen doğrudan bağlantı kurarak tekrar deneyin.
+                        Eğer bir sorun yaşıyorsanız, lütfen destek ekibimizle iletişime geçiniz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function showModal(value) {
+            var modals = document.querySelectorAll('.modal');
+
+            // Tüm modalları gizlemek için klasik bir for döngüsü kullan
+            for (var i = 0; i < modals.length; i++) {
+                modals[i].style.display = 'none';
+            }
+
+            // Seçilen modalı göster
+            var modalName = document.getElementById(value);
+            if (modalName) {
+                modalName.style.display = 'flex';
+            }
+        }
+
+        // Tüm modalları kapatma fonksiyonu
+        function closeAllModals() {
+            var modals = document.querySelectorAll('.modal');
+
+            // Klasik for döngüsü ile modalları gizle
+            for (var i = 0; i < modals.length; i++) {
+                modals[i].style.display = 'none';
+            }
+        }
+
+        // close-modal sınıfına sahip butonlara tıklanınca tüm modalları kapat
+        var closeButtons = document.querySelectorAll('.close-modal');
+        for (var i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].addEventListener('click', closeAllModals);
+        }
+
+        var closeAggrement = document.querySelector('.reject-agreement');
+        closeAggrement.addEventListener('click', function () {
+            closeAllModals();
+            window.location.href = '/logingame.aspx';
+
+        })
+
+        // Modalın dışına tıklanırsa modalları kapat
+        var modals = document.querySelectorAll('.modal');
+        for (var i = 0; i < modals.length; i++) {
+            modals[i].addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeAllModals();
+                }
+            });
+        }
+
+        // Escape tuşuna basıldığında modalları kapat
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+    </script>
+</body>
+</html>
